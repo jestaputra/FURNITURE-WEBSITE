@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="35x35"
+      href="../LANDING-PAGE/images/logo-2.png"
+    />
+    <title>FURNITURE - BLOG</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- -------------------------POPUP BOX-------------------------- -->
+     
+    <div id="pop-up">
+
+      <div class="box-pop-up">
+        <div class="tick"><img src="images/checkmark.png" alt=""></div>
+        <h1>Thankyou for your order</h1>
+        <p>Your order is <span class="countPopUp"></span> Study Desk and the total price is <span class="total"></span>. your order code is: K5DF5672</p>
+        <div class="box-button">
+          <button class="cancel">Cancel</button>
+          <button class="confirm">Confirm</button>
+        </div>
+      </div>
+
+    </div>
+        
+    <!-- ---------------------------BOX-MENU-------------------------- -->
+
+    <div class="box-menu">
+      <ul>
+        <li><a href="../LANDING-PAGE/home.html">Home</a></li>
+        <li><a href="../ABOUT-PAGE/about.html">About Us</a></li>
+        <li><a href="../SHOP-PAGE/shop.html">Shop</a></li>
+        <li><a href="../BLOG-PAGE/blog.html">Blog</a></li>
+        <li><a href="../CONTACT-PAGE/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    
+    <!-- -----------------------------CART-BOX-------------------------- -->
+
+    <div class="container-cart">
+      <h1 onclick="hideBoxCart()"><i class="bx bx-x"></i></h1>
+
+      <div class="wraper-cart">
+
+        <div class="box-product">
+          <div class="image-cart"><img src="../LANDING-PAGE/images/card-11.jpg" alt="" /></div>
+          <div class="desc-cart">
+            <h3>Study Desk</h3>
+            <h4 id="prices">$50.00</h4>
+            <div class="counting">
+              <span onclick="handleMin()" id="minus">-</span>
+              <p id="count">1</p>
+              <span onclick="handlePlus()" id="plus">+</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <button onclick="showPopUp()">Buy Now</button>
+    </div>
+
+    <!-- -----------------------------CONTENT--------------------------- -->
+
+    <div class="container">
+      <!-- -------------------------------NAVBAR--------------------------- -->
+
+      <div class="nav">
+        <div class="scroll"></div>
+        <header>
+          <div>
+            <img src="../LANDING-PAGE/images/logo-2.png" />
+            <h1><span>I</span>va<span>C</span>ross</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="../LANDING-PAGE/home.html">Home</a></li>
+              <li>
+                <a href="../ABOUT-PAGE/about.html">About Us</a>
+              </li>
+              <li><a href="../SHOP-PAGE/shop.html">Shop</a></li>
+              <li><a class="active" href="../BLOG-PAGE/blog.html">Blog</a></li>
+              <li><a href="../CONTACT-PAGE/contact.html">Contact Us</a></li>
+            </ul>
+            <div>
+              <div onclick="toggleBoxMenu()" class="open-menu"><i class='bx bx-menu-alt-right'></i></div>
+              <div class="search">
+                <input type="text" id="input-box" /><button onclick="search()">
+                  <i class="bx bx-search"></i>
+                </button>
+              </div>
+              <p onclick="showBoxCart()">
+                <i class="bx bx-cart-alt"></i><span></span>
+              </p>
+            </div>
+          </nav>
+        </header>
+      </div>
+
+      <!-- ------------------------INTRO----------------------------- -->
+
+      <div class="intro">
+        <div class="text-box">
+          <div class="text-1">
+            <h5 class="desc-text">
+              <p></p>
+              Save This Weekend
+            </h5>
+            <h1>Our Blogs</h1>
+          </div>
+          <h5><span>Home / </span>Blog</h5>
+        </div>
+      </div>
+
+      <!-- -------------------------CONTENT---------------------------- -->
+
+      <section class="content">
+        <div class="wraper-content">
+          <!-- ---------------------------BOX 1------------------------------ -->
+
+          <div class="box-1">
+            <!-- ---------------------------NAVBAR-BOX------------------------------ -->
+
+            <div class="nav-box-1" data-aos="fade-up" data-aos-duration="800" data-aos-offset="50">
+              <div>
+                <h5 class="desc-text brown-desc">
+                  <p></p>
+                  Blogs
+                </h5>
+                <h1>Featured Posts</h1>
+              </div>
+              <button class="setting-button">
+                <div class="throwback"></div>
+                <p>View all Blog</p>
+              </button>
+            </div>
+
+            <!-- ------------------------BOX-CARD--------------------------- -->
+
+            <div class="box-card">
+              <!-- -----------------------------CARD-1-------------------------------- -->
+
+              <div class="card" data-aos="fade-down" data-aos-duration="800" data-aos-offset="100">
+                <div class="img-card">
+                  <img src="images/blog-1.jpg" alt="" />
+                </div>
+                <div class="desc-card">
+                  <h4>What is Lorem Ipsum ?</h4>
+                  <p>Lorem, ipsum dolor sit ametiaror consectetur elit alim.</p>
+                  <button>Read More<i class="bx bx-arrow-back"></i></button>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD-2-------------------------------- -->
+
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
+                <div class="img-card">
+                  <img src="images/blog-3.jpg" alt="" />
+                </div>
+                <div class="desc-card">
+                  <h4>What is Lorem Ipsum ?</h4>
+                  <p>Lorem, ipsum dolor sit ametiaror consectetur elit alim.</p>
+                  <button>Read More<i class="bx bx-arrow-back"></i></button>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD-3-------------------------------- -->
+
+              <div class="card" data-aos="fade-down" data-aos-duration="800" data-aos-offset="100">
+                <div class="img-card">
+                  <img src="images/blog-2.jpg" alt="" />
+                </div>
+                <div class="desc-card">
+                  <h4>What is Lorem Ipsum ?</h4>
+                  <p>Lorem, ipsum dolor sit ametiaror consectetur elit alim.</p>
+                  <button>Read More<i class="bx bx-arrow-back"></i></button>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD-4-------------------------------- -->
+
+              <div class="card" data-aos="fade-down" data-aos-duration="800" data-aos-offset="100">
+                <div class="img-card">
+                  <img src="images/blog-5.jpg" alt="" />
+                </div>
+                <div class="desc-card">
+                  <h4>What is Lorem Ipsum ?</h4>
+                  <p>Lorem, ipsum dolor sit ametiaror consectetur elit alim.</p>
+                  <button>Read More<i class="bx bx-arrow-back"></i></button>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD-5-------------------------------- -->
+
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
+                <div class="img-card">
+                  <img src="images/blog-4.jpg" alt="" />
+                </div>
+                <div class="desc-card">
+                  <h4>What is Lorem Ipsum ?</h4>
+                  <p>Lorem, ipsum dolor sit ametiaror consectetur elit alim.</p>
+                  <button>Read More<i class="bx bx-arrow-back"></i></button>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD-6-------------------------------- -->
+
+              <div class="card" data-aos="fade-down" data-aos-duration="800" data-aos-offset="100">
+                <div class="img-card">
+                  <img src="images/blog-8.jpg" alt="" />
+                </div>
+                <div class="desc-card">
+                  <h4>What is Lorem Ipsum ?</h4>
+                  <p>Lorem, ipsum dolor sit ametiaror consectetur elit alim.</p>
+                  <button>Read More<i class="bx bx-arrow-back"></i></button>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD-7-------------------------------- -->
+
+              <div class="card" data-aos="fade-down" data-aos-duration="800" data-aos-offset="100">
+                <div class="img-card">
+                  <img src="images/blog-6.jpg" alt="" />
+                </div>
+                <div class="desc-card">
+                  <h4>What is Lorem Ipsum ?</h4>
+                  <p>Lorem, ipsum dolor sit ametiaror consectetur elit alim.</p>
+                  <button>Read More<i class="bx bx-arrow-back"></i></button>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD-8-------------------------------- -->
+
+              <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
+                <div class="img-card">
+                  <img src="images/blog-7.jpg" alt="" />
+                </div>
+                <div class="desc-card">
+                  <h4>What is Lorem Ipsum ?</h4>
+                  <p>Lorem, ipsum dolor sit ametiaror consectetur elit alim.</p>
+                  <button>Read More<i class="bx bx-arrow-back"></i></button>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD-9-------------------------------- -->
+
+              <div class="card" data-aos="fade-down" data-aos-duration="800" data-aos-offset="100">
+                <div class="img-card">
+                  <img src="images/blog-9.jpg" alt="" />
+                </div>
+                <div class="desc-card">
+                  <h4>What is Lorem Ipsum ?</h4>
+                  <p>Lorem, ipsum dolor sit ametiaror consectetur elit alim.</p>
+                  <button>Read More<i class="bx bx-arrow-back"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- --------------------------------BOX 2--------------------------------- -->
+
+          <div class="box-2">
+            <!-- ---------------------CATEGORY 1-------------------------------- -->
+
+            <div class="category one" data-aos="fade-up" data-aos-duration="700" data-aos-offset="100">
+              <h2>All Category</h2>
+              <ul>
+                <li onclick="handleList()" class="list active">All Items</li>
+                <li onclick="handleList()" class="list">Sofas</li>
+                <li onclick="handleList()" class="list">Tables</li>
+                <li onclick="handleList()" class="list">Chairs</li>
+                <li onclick="handleList()" class="list">Beds</li>
+                <li onclick="handleList()" class="list">Mattresses</li>
+                <li onclick="handleList()" class="list">Dining Tables</li>
+                <li onclick="handleList()" class="list">Dining Chairs</li>
+              </ul>
+            </div>
+
+            <!-- ------------------------CATEGORY 2----------------------------- -->
+
+            <div class="category two" data-aos="fade-up" data-aos-duration="700" data-aos-offset="100">
+              <h2>Tags</h2>
+              <div>
+                <span class="flex-1">Premium</span>
+                <span>Design</span>
+              </div>
+              <div>
+                <span class="flex-1">Furniture</span>
+                <span>Trend</span>
+              </div>
+              <div>
+                <span class="flex-1">Category</span>
+                <span>Luxury</span>
+              </div>
+            </div>
+
+            <!-- -------------------------CATEGORY 3------------------------------ -->
+
+            <div class="category three" data-aos="fade-up" data-aos-duration="700" data-aos-offset="100">
+              <h5 class="desc-text">
+                <p></p>
+                Save This Weekend
+              </h5>
+              <h3>Upto 25% Off</h3>
+              <button>
+                <a class="landing-button-a" href="#"
+                  >Shop Now <i class="bx bx-arrow-back"></i
+                ></a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <!-- ----------------------------CONTENT-ENDING------------------------ -->
+
+      <section id="content-6">
+        <div class="wraper-content-6">
+          <div class="carousel-coment" data-aos="zoom-in" data-aos-duration="700" data-aos-offset="100">
+            <div class="handle-carousel-comment active">
+              <!-- --------------------------CARD-COMMENT1-------------- -->
+
+              <div class="card-comment">
+                <div class="wraper-profile">
+                  <div class="profile">
+                    <div class="image">
+                      <img src="../LANDING-PAGE/images/comment-1.jpg" alt="" />
+                    </div>
+                    <div class="name">
+                      <h4>Jessica Cimber</h4>
+                      <p>
+                        <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bx-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    class="quote"
+                    src="../LANDING-PAGE/images/quote.png"
+                    alt=""
+                  />
+                </div>
+                <p class="paragraph">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam ratione voluptatem quasi est andae possimus porro
+                  doloribus, aliquid ipsam fugiat nda dolorem saepe eos fugit
+                  recusandae quidem? Voluptatum, id iste.
+                </p>
+                <div class="slide">
+                  <span class="count-slide active"></span>
+                  <span class="count-slide"></span>
+                  <span class="count-slide"></span>
+                </div>
+              </div>
+
+              <!-- ----------------------CARD-COMMENT2----------------------- -->
+
+              <div class="card-comment">
+                <div class="wraper-profile">
+                  <div class="profile">
+                    <div class="image">
+                      <img src="../LANDING-PAGE/images/comment-2.jpg" alt="" />
+                    </div>
+                    <div class="name">
+                      <h4>Sasha Arine</h4>
+                      <p>
+                        <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bx-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    class="quote"
+                    src="../LANDING-PAGE/images/quote.png"
+                    alt=""
+                  />
+                </div>
+                <p class="paragraph">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam ratione voluptatem quasi est andae possimus porro
+                  doloribus, aliquid ipsam fugiat nda dolorem saepe eos fugit
+                  recusandae quidem? Voluptatum, id iste.
+                </p>
+                <div class="slide">
+                  <span class="count-slide"></span>
+                  <span class="count-slide active"></span>
+                  <span class="count-slide"></span>
+                </div>
+              </div>
+
+              <!-- ------------------------CARD-COMMENT3------------------ -->
+
+              <div class="card-comment">
+                <div class="wraper-profile">
+                  <div class="profile">
+                    <div class="image">
+                      <img src="../LANDING-PAGE/images/comment-3.jpg" alt="" />
+                    </div>
+                    <div class="name">
+                      <h4>Aldo Jr.</h4>
+                      <p>
+                        <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bx-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    class="quote"
+                    src="../LANDING-PAGE/images/quote.png"
+                    alt=""
+                  />
+                </div>
+                <p class="paragraph">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam ratione voluptatem quasi est andae possimus porro
+                  doloribus, aliquid ipsam fugiat nda dolorem saepe eos fugit
+                  recusandae quidem? Voluptatum, id iste.
+                </p>
+                <div class="slide">
+                  <span class="count-slide"></span>
+                  <span class="count-slide"></span>
+                  <span class="count-slide active"></span>
+                </div>
+              </div>
+
+              <!-- --------------------------CARD-COMMENT1-------------- -->
+
+              <div class="card-comment">
+                <div class="wraper-profile">
+                  <div class="profile">
+                    <div class="image">
+                      <img src="../LANDING-PAGE/images/comment-1.jpg" alt="" />
+                    </div>
+                    <div class="name">
+                      <h4>Jessica Cimber</h4>
+                      <p>
+                        <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bx-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    class="quote"
+                    src="../LANDING-PAGE/images/quote.png"
+                    alt=""
+                  />
+                </div>
+                <p class="paragraph">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam ratione voluptatem quasi est andae possimus porro
+                  doloribus, aliquid ipsam fugiat nda dolorem saepe eos fugit
+                  recusandae quidem? Voluptatum, id iste.
+                </p>
+                <div class="slide">
+                  <span class="count-slide active"></span>
+                  <span class="count-slide"></span>
+                  <span class="count-slide"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -----------------FOOTER---------------------------- -->
+
+      <footer>
+        <div class="wraper-footer" >
+
+          <div class="row-1" data-aos="fade-up" data-aos-duration="600">
+            <h4>About Us</h4>
+            <ul>
+              <li>Home</li>
+              <li>Shop</li>
+              <li>Product</li>
+              <li>About Us</li>
+              <li>Festival Offer</li>
+              <li>Contact Us</li>
+              <li>Login</li>
+            </ul>
+          </div>
+
+          <div class="row-2" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+            <h4>Brands</h4>
+            <ul>
+              <li>Aldum</li>
+              <li>Aldsam</li>
+              <li>Bitar</li>
+              <li>EastLogue</li>
+              <li>Unum</li>
+              <li>Vercela</li>
+              <li>Lady with Co</li>
+            </ul>
+          </div>
+
+          <div class="row-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
+            <h4>Categories</h4>
+            <ul>
+              <li>Single Sofa</li>
+              <li>Sleeper Sofas</li>
+              <li>Accent Chairs</li>
+              <li>Rare Table</li>
+              <li>Loveseats</li>
+              <li>Chairs-and-a-half</li>
+              <li>Recliners</li>
+            </ul>
+          </div>
+
+          <div class="row-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="1200">
+            <h4>Support</h4>
+            <ul>
+              <li>GDPR</li>
+              <li>Cookie Policy</li>
+              <li>Terms</li>
+              <li>About Policy</li>
+              <li>Privacy Policy</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+        </div>
+        
+
+        <div class="wraper-footer-mobile" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">
+
+          <div class="row row-1-mobile">
+            <div class="drop-down" onclick="openMenu('row-1-mobile')">
+              <h4>About Us</h4>
+              <span><i class='bx bx-chevron-up'></i></span>
+            </div>
+            <ul>
+              <li>Home</li>
+              <li>Shop</li>
+              <li>Product</li>
+              <li>About Us</li>
+              <li>Festival Offer</li>
+              <li>Contact Us</li>
+              <li>Login</li>
+            </ul>
+          </div>
+
+          <div class="row row-2-mobile">
+            <div class="drop-down" onclick="openMenu('row-2-mobile')">
+              <h4>Brands</h4>
+              <span><i class='bx bx-chevron-up'></i></span>
+            </div>
+            <ul>
+              <li>Aldum</li>
+              <li>Aldsam</li>
+              <li>Bitar</li>
+              <li>EastLogue</li>
+              <li>Unum</li>
+              <li>Vercela</li>
+              <li>Lady with Co</li>
+            </ul>
+          </div>
+
+          <div class="row row-3-mobile">
+            <div class="drop-down" onclick="openMenu('row-3-mobile')">
+              <h4>Categories</h4>
+              <span><i class='bx bx-chevron-up'></i></span>
+            </div>
+            <ul>
+              <li>Single Sofa</li>
+              <li>Sleeper Sofas</li>
+              <li>Accent Chairs</li>
+              <li>Rare Table</li>
+              <li>Loveseats</li>
+              <li>Chairs-and-a-half</li>
+              <li>Recliners</li>
+            </ul>
+          </div>
+
+          <div class="row row-4-mobile">
+            <div class="drop-down" onclick="openMenu('row-4-mobile')">
+              <h4>Support</h4>
+              <span><i class='bx bx-chevron-up'></i></span>
+            </div>
+            <ul>
+              <li>GDPR</li>
+              <li>Cookie Policy</li>
+              <li>Terms</li>
+              <li>About Policy</li>
+              <li>Privacy Policy</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+        </div>
+
+      </footer>
+
+      <!-- ------------------------------FINAL---------------------------- -->
+
+      <div class="final">
+        <div class="logo">
+          <img src="../LANDING-PAGE/images/logo.png" alt="" />
+          <h3>IvaCross</h3>
+        </div>
+        <ul>
+          <li><i class="bx bxl-instagram"></i></li>
+          <li><i class="bx bxl-facebook-circle"></i></li>
+          <li><i class="bx bxl-whatsapp"></i></li>
+        </ul>
+      </div>
+
+      
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

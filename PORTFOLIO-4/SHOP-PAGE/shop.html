@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FURNITURE - SHOP</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="35x35"
+      href="../LANDING-PAGE/images/logo-2.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- -------------------------POPUP BOX-------------------------- -->
+     
+    <div id="pop-up">
+
+      <div class="box-pop-up">
+        <div class="tick"><img src="images/checkmark.png" alt=""></div>
+        <h1>Thankyou for your order</h1>
+        <p>Your order is <span class="countPopUp"></span> Study Desk and the total price is <span class="total"></span>. your order code is: K5DF5672</p>
+        <div class="box-button">
+          <button class="cancel">Cancel</button>
+          <button class="confirm">Confirm</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ---------------------------BOX-MENU-------------------------- -->
+
+    <div class="box-menu">
+      <ul>
+        <li><a href="../LANDING-PAGE/home.html">Home</a></li>
+        <li><a href="../ABOUT-PAGE/about.html">About Us</a></li>
+        <li><a href="../SHOP-PAGE/shop.html">Shop</a></li>
+        <li><a href="../BLOG-PAGE/blog.html">Blog</a></li>
+        <li><a href="../CONTACT-PAGE/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- -----------------------------CART-BOX-------------------------- -->
+
+    <div class="container-cart">
+      <h1 onclick="hideBoxCart()"><i class="bx bx-x"></i></h1>
+
+      <ul class="wraper-cart">
+
+        <li class="list-card"><div class="box-product">
+          <div class="image-cart"><img src="../LANDING-PAGE/images/card-11.jpg" alt="" /></div>
+          <div class="desc-cart">
+            <h3>Study Desk</h3>
+            <h4 id="prices">$50.00</h4>
+            <div class="counting">
+              <span onclick="handleMin()" id="minus">-</span>
+              <p id="count">1</p>
+              <span onclick="handlePlus()" id="plus">+</span>
+            </div>
+          </div>
+        </div></li>
+
+      </ul>
+      <button onclick="showPopUp()">Buy Now</button>
+    </div>
+
+    <!-- ------------------------------CONTENT-------------------------- -->
+
+    <div class="container">
+      <!-- -------------------------------NAVBAR--------------------------- -->
+
+      <div class="nav">
+        <div class="scroll"></div>
+        <header>
+          <div>
+            <img src="../LANDING-PAGE/images/logo-2.png" />
+            <h1><span>I</span>va<span>C</span>ross</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="../LANDING-PAGE/home.html">Home</a></li>
+              <li>
+                <a href="../ABOUT-PAGE/about.html">About Us</a>
+              </li>
+              <li><a class="active" href="../SHOP-PAGE/shop.html">Shop</a></li>
+              <li><a href="../BLOG-PAGE/blog.html">Blog</a></li>
+              <li><a href="../CONTACT-PAGE/contact.html">Contact Us</a></li>
+            </ul>
+            <div>
+              <div onclick="toggleBoxMenu()" class="open-menu"><i class='bx bx-menu-alt-right'></i></div>
+              <div class="search">
+                <input type="text" id="input-box" /><button onclick="search()">
+                  <i class="bx bx-search"></i>
+                </button>
+              </div>
+              <p onclick="showBoxCart()">
+                <i class="bx bx-cart-alt"></i><span></span>
+              </p>
+            </div>
+          </nav>
+        </header>
+      </div>
+
+      <!-- ------------------------INTRO----------------------------- -->
+
+      <div class="intro">
+        <div class="text-box">
+          <div class="text-1">
+            <h5 class="desc-text">
+              <p></p>
+              Save This Weekend
+            </h5>
+            <h1>Our Shop</h1>
+          </div>
+          <h5><span>Home / </span>Shop</h5>
+        </div>
+      </div>
+
+      <!-- ---------------------------CONTENT---------------------------- -->
+      <section id="content">
+        <div class="wraper-content">
+          
+          <div class="box-1">
+            <!-- --------------------------CATEGORY ONE--------------------------- -->
+
+            <div class="category one" data-aos="fade-up" data-aos-duration="700" data-aos-offset="100">
+              <h2>All Category</h2>
+              <ul>
+                <li onclick="handleList()" class="list active">All Items</li>
+                <li onclick="handleList()" class="list">Sofas</li>
+                <li onclick="handleList()" class="list">Tables</li>
+                <li onclick="handleList()" class="list">Chairs</li>
+                <li onclick="handleList()" class="list">Beds</li>
+                <li onclick="handleList()" class="list">Mattresses</li>
+                <li onclick="handleList()" class="list">Dining Tables</li>
+                <li onclick="handleList()" class="list">Dining Chairs</li>
+              </ul>
+            </div>
+
+            <!-- -----------------------------CATEGORY TWO---------------------------  -->
+
+            <div class="category two" data-aos="fade-up" data-aos-duration="700" data-aos-offset="100">
+              <h2>All Brands</h2>
+              <ul>
+                <div id="item">
+                  <p>Roche Bobois</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>Aldum</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>Aldsam</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>Bitar</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>EastLogue</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>Unum</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>Vercela</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>Lady with Co</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+              </ul>
+            </div>
+
+            <!-- --------------------------CATEGORY THREE---------------------- -->
+
+            <div class="category three" data-aos="fade-up" data-aos-duration="700" data-aos-offset="100">
+              <h1>Price</h1>
+              <div class="handle-slider">
+                <span id="paymentValue">$0.00</span>
+                <input
+                  class="range"
+                  type="range"
+                  name="range"
+                  min="0"
+                  value="0"
+                  max="500"
+                  onchange="handleRange(this.value)"
+                  onmousemove="handleRange(this.value)"
+                />
+              </div>
+            </div>
+
+            <!-- ----------------------------CATEGORY---------------------------- -->
+
+            <div class="category four" data-aos="fade-up" data-aos-duration="700" data-aos-offset="100">
+              <h5 class="desc-text">
+                <p></p>
+                Save This Weekend
+              </h5>
+              <h3>Upto 25% Off</h3>
+              <button>
+                <a class="landing-button-a" href="#"
+                  >Shop Now <i class="bx bx-arrow-back"></i
+                ></a>
+              </button>
+            </div>
+          </div>
+
+          <!-- -----------------------------BOX-2--------------------------- -->
+
+          <div class="box-2">
+            <div class="iklan" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+              <h5 class="desc-text">
+                <p></p>
+                Save This Weekend
+              </h5>
+              <h3>Upto 40% Off</h3>
+              <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
+              <button>
+                <a class="landing-button-a" href="#"
+                  >Shop Now <i class="bx bx-arrow-back"></i
+                ></a>
+              </button>
+            </div>
+
+            <div class="label-select" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
+              <h1>Our latest Products</h1>
+              <div class="container-drop-down">
+                <div
+                  onclick="openDropDownOne()"
+                  class="category-mobile handle-dropdown one"
+                >
+                  <h4>All Items</h4>
+                  <i class="bx bx-chevron-up"></i>
+                </div>
+                <div
+                  onclick="openDropDownTwo()"
+                  class="brands-mobile handle-dropdown two"
+                >
+                  <h4>All Brands</h4>
+                  <i class="bx bx-chevron-up"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="open-category category one" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100" data-aos-delay="400">
+              <h2>All Category</h2>
+              <ul>
+                <li onclick="handleList()" class="list active">All Items</li>
+                <li onclick="handleList()" class="list">Sofas</li>
+                <li onclick="handleList()" class="list">Tables</li>
+                <li onclick="handleList()" class="list">Chairs</li>
+                <li onclick="handleList()" class="list">Beds</li>
+                <li onclick="handleList()" class="list">Mattresses</li>
+                <li onclick="handleList()" class="list">Dining Tables</li>
+                <li onclick="handleList()" class="list">Dining Chairs</li>
+              </ul>
+            </div>
+
+            <div class="open-category category two" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100" data-aos-delay="800">
+              <h2>All Brands</h2>
+              <ul>
+                <div id="item">
+                  <p>Roche Bobois</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>Aldum</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>Aldsam</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>Bitar</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>EastLogue</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>Unum</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>Vercela</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+
+                <div id="item">
+                  <p>Lady with Co</p>
+                  <span class="checklist"
+                    ><img src="images/centang.png" alt=""
+                  /></span>
+                </div>
+              </ul>
+            </div>
+
+            <!-- ----------------------------PRODUCTS-1----------------------------- -->
+
+            <div id="productOne" class="products active" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100" data-aos-delay="200">
+              <!-- ------------------------------CARD 1--------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-1.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Soft Chairs</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$60.00 <span>$80.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ------------------------------CARD 2----------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-2.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Dinner Table</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$120.00 <span>$150.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ------------------------------CARD 3------------------------------ -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-3.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Rare Table</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$185.00 <span>$200.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD 4------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-4.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Classic Table</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$100.00 <span>$110.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ----------------------------CARD 5-------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-5.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Classic Sofa</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$150.00 <span>$175.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ----------------------------CARD 6-------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-6.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Chairs</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$45.00 <span>$50.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD 7------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-7.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>CupBoard</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$140.00 <span>$165.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD 8------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-20.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Rare Chairs</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$335.00 <span>$350.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ----------------------------CARD 9-------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-9.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Classic Bed</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$230.00 <span>$250.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ------------------------------PRODUCTS-2-------------------------- -->
+
+            <div id="productTwo" class="products">
+              <!-- ------------------------------CARD 1--------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-10.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Soft Chairs</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$60.00 <span>$80.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ------------------------------CARD 2----------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-30.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Dinner Table</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$120.00 <span>$150.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ------------------------------CARD 3------------------------------ -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-12.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Rare Table</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$185.00 <span>$200.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD 4------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-13.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Classic Table</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$100.00 <span>$110.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ----------------------------CARD 5-------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-14.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Classic Sofa</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$150.00 <span>$175.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ----------------------------CARD 6-------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-15.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Chairs</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$45.00 <span>$50.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD 7------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-16.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Classic Sofa</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$150.00 <span>$175.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD 8------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-17.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Rare Chairs</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$335.00 <span>$350.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ----------------------------CARD 9-------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-26.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Classic Bed</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$230.00 <span>$250.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ---------------------------PRODUCTS-3----------------------------- -->
+
+            <div id="productThree" class="products">
+              <!-- ------------------------------CARD 1--------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-19.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Soft Chairs</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$60.00 <span>$80.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ------------------------------CARD 2----------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-22.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Dinner Table</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$120.00 <span>$150.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ------------------------------CARD 3------------------------------ -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-29.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Rare Table</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$185.00 <span>$200.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD 4------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-31.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Classic Table</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$100.00 <span>$110.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ----------------------------CARD 5-------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-24.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Classic Sofa</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$150.00 <span>$175.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ----------------------------CARD 6-------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-26.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Chairs</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$45.00 <span>$50.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD 7------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-27.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>CupBoard</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$140.00 <span>$165.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- -----------------------------CARD 8------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-11.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Rare Chairs</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$335.00 <span>$350.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ----------------------------CARD 9-------------------------------- -->
+
+              <div class="card">
+                <div class="img-card">
+                  <img src="../LANDING-PAGE/images/card-25.jpg" alt="" />
+                  <div class="navbar-card">
+                    <button class="label">Sale</button>
+                    <div id="handleLike">
+                      <img
+                        class="like"
+                        src="../LANDING-PAGE/images/heart.png"
+                        alt=""
+                      />
+                      <img
+                        class="liked"
+                        src="../LANDING-PAGE/images/red-heart.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc-card">
+                  <div class="name">
+                    <h4>Classic Bed</h4>
+                    <p>
+                      <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                      ><i class="bx bxs-star-half"></i>
+                    </p>
+                  </div>
+                  <div class="payment">
+                    <h5>$230.00 <span>$250.00</span></h5>
+                    <button class="label">
+                      <i class="bx bx-cart-alt"></i>Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="show-products">
+              <span
+                onclick="HandleProducts('productOne')"
+                class="show active"
+              ></span>
+              <span onclick="HandleProducts('productTwo')" class="show"></span>
+              <span
+                onclick="HandleProducts('productThree')"
+                class="show"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ----------------------------CONTENT-ENDING------------------------ -->
+
+      <section id="content-ENDING">
+        <div class="wraper-content-6">
+          <div class="carousel-coment" data-aos="zoom-in" data-aos-duration="700" data-aos-offset="100">
+            <div class="handle-carousel-comment active">
+              <!-- --------------------------CARD-COMMENT1-------------- -->
+
+              <div class="card-comment">
+                <div class="wraper-profile">
+                  <div class="profile">
+                    <div class="image">
+                      <img src="../LANDING-PAGE/images/comment-1.jpg" alt="" />
+                    </div>
+                    <div class="name">
+                      <h4>Jessica Cimber</h4>
+                      <p>
+                        <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bx-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    class="quote"
+                    src="../LANDING-PAGE/images/quote.png"
+                    alt=""
+                  />
+                </div>
+                <p class="paragraph">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam ratione voluptatem quasi est andae possimus porro
+                  doloribus, aliquid ipsam fugiat nda dolorem saepe eos fugit
+                  recusandae quidem? Voluptatum, id iste.
+                </p>
+                <div class="slide">
+                  <span class="count-slide active"></span>
+                  <span class="count-slide"></span>
+                  <span class="count-slide"></span>
+                </div>
+              </div>
+
+              <!-- ----------------------CARD-COMMENT2----------------------- -->
+
+              <div class="card-comment">
+                <div class="wraper-profile">
+                  <div class="profile">
+                    <div class="image">
+                      <img src="../LANDING-PAGE/images/comment-2.jpg" alt="" />
+                    </div>
+                    <div class="name">
+                      <h4>Sasha Arine</h4>
+                      <p>
+                        <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bx-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    class="quote"
+                    src="../LANDING-PAGE/images/quote.png"
+                    alt=""
+                  />
+                </div>
+                <p class="paragraph">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam ratione voluptatem quasi est andae possimus porro
+                  doloribus, aliquid ipsam fugiat nda dolorem saepe eos fugit
+                  recusandae quidem? Voluptatum, id iste.
+                </p>
+                <div class="slide">
+                  <span class="count-slide"></span>
+                  <span class="count-slide active"></span>
+                  <span class="count-slide"></span>
+                </div>
+              </div>
+
+              <!-- ------------------------CARD-COMMENT3------------------ -->
+
+              <div class="card-comment">
+                <div class="wraper-profile">
+                  <div class="profile">
+                    <div class="image">
+                      <img src="../LANDING-PAGE/images/comment-3.jpg" alt="" />
+                    </div>
+                    <div class="name">
+                      <h4>Aldo Jr.</h4>
+                      <p>
+                        <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bx-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    class="quote"
+                    src="../LANDING-PAGE/images/quote.png"
+                    alt=""
+                  />
+                </div>
+                <p class="paragraph">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam ratione voluptatem quasi est andae possimus porro
+                  doloribus, aliquid ipsam fugiat nda dolorem saepe eos fugit
+                  recusandae quidem? Voluptatum, id iste.
+                </p>
+                <div class="slide">
+                  <span class="count-slide"></span>
+                  <span class="count-slide"></span>
+                  <span class="count-slide active"></span>
+                </div>
+              </div>
+
+              <!-- --------------------------CARD-COMMENT1-------------- -->
+
+              <div class="card-comment">
+                <div class="wraper-profile">
+                  <div class="profile">
+                    <div class="image">
+                      <img src="../LANDING-PAGE/images/comment-1.jpg" alt="" />
+                    </div>
+                    <div class="name">
+                      <h4>Jessica Cimber</h4>
+                      <p>
+                        <i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bxs-star"></i><i class="bx bxs-star"></i
+                        ><i class="bx bx-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    class="quote"
+                    src="../LANDING-PAGE/images/quote.png"
+                    alt=""
+                  />
+                </div>
+                <p class="paragraph">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam ratione voluptatem quasi est andae possimus porro
+                  doloribus, aliquid ipsam fugiat nda dolorem saepe eos fugit
+                  recusandae quidem? Voluptatum, id iste.
+                </p>
+                <div class="slide">
+                  <span class="count-slide active"></span>
+                  <span class="count-slide"></span>
+                  <span class="count-slide"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -----------------FOOTER---------------------------- -->
+
+      <footer>
+        <div class="wraper-footer">
+
+          <div class="row-1" data-aos="fade-up" data-aos-duration="600">
+            <h4>About Us</h4>
+            <ul>
+              <li>Home</li>
+              <li>Shop</li>
+              <li>Product</li>
+              <li>About Us</li>
+              <li>Festival Offer</li>
+              <li>Contact Us</li>
+              <li>Login</li>
+            </ul>
+          </div>
+
+          <div class="row-2" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+            <h4>Brands</h4>
+            <ul>
+              <li>Aldum</li>
+              <li>Aldsam</li>
+              <li>Bitar</li>
+              <li>EastLogue</li>
+              <li>Unum</li>
+              <li>Vercela</li>
+              <li>Lady with Co</li>
+            </ul>
+          </div>
+
+          <div class="row-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">
+            <h4>Categories</h4>
+            <ul>
+              <li>Single Sofa</li>
+              <li>Sleeper Sofas</li>
+              <li>Accent Chairs</li>
+              <li>Rare Table</li>
+              <li>Loveseats</li>
+              <li>Chairs-and-a-half</li>
+              <li>Recliners</li>
+            </ul>
+          </div>
+
+          <div class="row-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="1200">
+            <h4>Support</h4>
+            <ul>
+              <li>GDPR</li>
+              <li>Cookie Policy</li>
+              <li>Terms</li>
+              <li>About Policy</li>
+              <li>Privacy Policy</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="wraper-footer-mobile" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">
+
+          <div class="row row-1-mobile">
+            <div class="drop-down" onclick="openMenu('row-1-mobile')">
+              <h4>About Us</h4>
+              <span><i class='bx bx-chevron-up'></i></span>
+            </div>
+            <ul>
+              <li>Home</li>
+              <li>Shop</li>
+              <li>Product</li>
+              <li>About Us</li>
+              <li>Festival Offer</li>
+              <li>Contact Us</li>
+              <li>Login</li>
+            </ul>
+          </div>
+
+          <div class="row row-2-mobile">
+            <div class="drop-down" onclick="openMenu('row-2-mobile')">
+              <h4>Brands</h4>
+              <span><i class='bx bx-chevron-up'></i></span>
+            </div>
+            <ul>
+              <li>Aldum</li>
+              <li>Aldsam</li>
+              <li>Bitar</li>
+              <li>EastLogue</li>
+              <li>Unum</li>
+              <li>Vercela</li>
+              <li>Lady with Co</li>
+            </ul>
+          </div>
+
+          <div class="row row-3-mobile">
+            <div class="drop-down" onclick="openMenu('row-3-mobile')">
+              <h4>Categories</h4>
+              <span><i class='bx bx-chevron-up'></i></span>
+            </div>
+            <ul>
+              <li>Single Sofa</li>
+              <li>Sleeper Sofas</li>
+              <li>Accent Chairs</li>
+              <li>Rare Table</li>
+              <li>Loveseats</li>
+              <li>Chairs-and-a-half</li>
+              <li>Recliners</li>
+            </ul>
+          </div>
+
+          <div class="row row-4-mobile">
+            <div class="drop-down" onclick="openMenu('row-4-mobile')">
+              <h4>Support</h4>
+              <span><i class='bx bx-chevron-up'></i></span>
+            </div>
+            <ul>
+              <li>GDPR</li>
+              <li>Cookie Policy</li>
+              <li>Terms</li>
+              <li>About Policy</li>
+              <li>Privacy Policy</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+      <!-- ------------------------------FINAL---------------------------- -->
+
+      <div class="final">
+        <div class="logo">
+          <img src="../LANDING-PAGE/images/logo.png" alt="" />
+          <h3>IvaCross</h3>
+        </div>
+        <ul>
+          <li><i class="bx bxl-instagram"></i></li>
+          <li><i class="bx bxl-facebook-circle"></i></li>
+          <li><i class="bx bxl-whatsapp"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
